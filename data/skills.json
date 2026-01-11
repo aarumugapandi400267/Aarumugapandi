@@ -3,16 +3,16 @@
     "name": "AI/Automation",
     "level": "Intermediate",
     "keywords": [
-      "Google Gemini API",
+      "Langchain",
       "Text2SQL",
       "RAG",
-      "Langchain",
-      "Google ADK"
+      "Google ADK",
+      "n8n"
     ]
   },
   {
     "name": "MERN Stack Development",
-    "level": "Advanced",
+    "level": "Intermediate",
     "keywords": [
       "MongoDB",
       "Express.js",
@@ -24,6 +24,18 @@
     ]
   },
   {
+    "name": "Programming Languages",
+    "level": "Intermediate",
+    "keywords": [
+      "C#",
+      "C++",
+      "Java",
+      "OOP",
+      "File I/O",
+      "Exception Handling"
+    ]
+  },
+  {
     "name": "Salesforce Development",
     "level": "Intermediate",
     "keywords": [
@@ -32,17 +44,6 @@
       "Lightning Components",
       "Process Automation",
       "Trailhead"
-    ]
-  },
-  {
-    "name": "Programming Languages",
-    "level": "Intermediate",
-    "keywords": [
-      "Java",
-      "C++",
-      "OOP",
-      "File I/O",
-      "Exception Handling"
     ]
   }
 ]
