@@ -1,11 +1,15 @@
 {
   "name": "Aarumugapandi T",
   "title": "MERN Stack Developer",
-  "profileImage": "https://aarumugapandi400267.github.io/Inner-Peace/data/profile.png",
+  "profileImage": "/data/profile.png",
+  "theme": {
+    "default": "dark",
+    "enableToggle": true
+  },
   "social": {
     "github": "https://github.com/aarumugapandi400267",
     "linkedin": "https://www.linkedin.com/in/aarumugapandi/",
-    "website": "https://aarumugapandi400267.github.io/Inner-Peace/"
+    "website": "https://aarumugapandi400267.github.io/Aarumugapandi/"
   },
   "sections": {
     "experience": "Experience",

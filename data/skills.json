@@ -1,22 +1,48 @@
 [
   {
+    "name": "AI/Automation",
+    "level": "Intermediate",
+    "keywords": [
+      "Google Gemini API",
+      "Text2SQL",
+      "RAG",
+      "Langchain",
+      "Google ADK"
+    ]
+  },
+  {
     "name": "MERN Stack Development",
     "level": "Advanced",
-    "keywords": ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs", "Authentication", "TypeScript"]
+    "keywords": [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "REST APIs",
+      "Authentication",
+      "TypeScript"
+    ]
   },
   {
     "name": "Salesforce Development",
     "level": "Intermediate",
-    "keywords": ["Apex", "SOQL", "Lightning Components", "Process Automation", "Trailhead"]
+    "keywords": [
+      "Apex",
+      "SOQL",
+      "Lightning Components",
+      "Process Automation",
+      "Trailhead"
+    ]
   },
   {
     "name": "Programming Languages",
     "level": "Intermediate",
-    "keywords": ["Java", "C++", "OOP", "File I/O", "Exception Handling"]
-  },
-  {
-    "name": "AI/Automation",
-    "level": "Intermediate",
-    "keywords": ["Google Gemini API", "Prompt Engineering", "Semantic Search", "Automated Email", "RAG"]
+    "keywords": [
+      "Java",
+      "C++",
+      "OOP",
+      "File I/O",
+      "Exception Handling"
+    ]
   }
 ]
