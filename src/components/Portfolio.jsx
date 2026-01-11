@@ -36,12 +36,12 @@ export default function Portfolio() {
     const [experience, setExperience] = useState([]);
     const [education, setEducation] = useState([]);
     const [contact, setContact] = useState({ address: "", phone: "", email: "" });
-    const [themeMode, setThemeMode] = useState("light");
+    const [themeMode, setThemeMode] = useState("light"); // Temporary default
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
 
-    // const domain = "/Inner-Peace"
-    const domain = "https://aarumugapandi400267.github.io/Aarumugapandi"
+    // Dynamically get the base URL from Vite config
+    const domain = import.meta.env.BASE_URL.replace(/\/$/, ''); // Remove trailing slash
 
     useEffect(() => {
         const fetchData = async () => {
@@ -51,11 +51,16 @@ export default function Portfolio() {
             await fetch(domain + "/data/experience.json").then(res => res.json()).then(setExperience);
             await fetch(domain + "/data/education.json").then(res => res.json()).then(setEducation);
             await fetch(domain + "/data/contact.json").then(res => res.json()).then(setContact);
-            await fetch(domain + "/data/profile.json").then(res => res.json()).then((data) => { setProfile(data) })
+            await fetch(domain + "/data/profile.json").then(res => res.json()).then((data) => {
+                setProfile(data);
+                // Set theme from localStorage or profile default
+                const savedTheme = localStorage.getItem("themeMode");
+                setThemeMode(savedTheme || data.theme?.default || "light");
+            });
             setLoading(false);
         };
         fetchData();
-    }, []);
+    }, [domain]);
 
     const theme = getTheme(themeMode);
 
@@ -97,7 +102,10 @@ export default function Portfolio() {
                 <Box sx={{ position: "fixed", top: 24, right: 32, zIndex: 1000 }}>
                     <IconButton
                         color="primary"
-                        onClick={() => setThemeMode(themeMode === "dark" ? "light" : "dark")}
+                        onClick={() => {
+                            setThemeMode(themeMode === "dark" ? "light" : "dark")
+                            localStorage.setItem("themeMode", themeMode === "dark" ? "light" : "dark")
+                        }}
                         aria-label="Toggle theme"
                         size="large"
                     >
@@ -108,7 +116,7 @@ export default function Portfolio() {
                 <motion.div initial={{ opacity: 0, y: -40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
                     <Box textAlign="center" mb={10}>
                         <Avatar
-                            src={profile.profileImage}
+                            src={domain + profile.profileImage}
                             alt="Profile Photo"
                             sx={{
                                 width: 220,
@@ -166,7 +174,8 @@ export default function Portfolio() {
                                                         <br />
                                                     </span>
                                                 ))}
-                                            </Typography>                                        </Box>
+                                            </Typography>
+                                        </Box>
                                     </motion.div>
                                 ))}
                             </Stack>
