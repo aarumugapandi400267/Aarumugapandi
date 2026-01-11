@@ -1,35 +1,12 @@
-# Majesty's Developer Portfolio 💼
+# React + Vite
 
-A fully responsive, animated, and data-driven portfolio built with **React**, **Material UI**, **Framer Motion**, and **JSON-based content management**. Designed to showcase skills, projects, experience, certifications, and more — with easy updates via separate JSON files.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## ✨ Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- 📱 **Responsive** layout across mobile, tablet, and desktop
-- 💡 **Material UI** (MUI) components for modern design
-- 🎬 **Framer Motion** for smooth animations on scroll
-- 🧠 Organized content: Skills, Education, Experience, Projects, Certifications
-- 🧩 JSON-based data system for easy updates
-- 📷 Profile photo, contact info, social links
-- 🌙 Ready for future upgrades (dark mode, i18n, CMS)
+## Expanding the ESLint configuration
 
----
-
-## 📦 Installation
-
-1. **Clone the repo**
-```bash
-git clone https://github.com/aarumugapandi400267/Inner-Peace.git
-cd Inner-Peace
-```
-2. **Install dependencies**
-```bash
-npm install
-```
-3. **Start the development server**
-```bash
-npm run dev
-```
-Uses Vite or CRA depending on your setup. Make sure ports are available.
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
